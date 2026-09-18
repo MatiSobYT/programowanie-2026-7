@@ -1,3 +1,4 @@
+//Napisz program, który pobierze od użytkownika dwie liczby całkowite, a następnie obliczy sumę wszystkich liczb całkowitych znajdujących się pomiędzy nimi, nie wliczając podanych liczb.
 #include <iostream>
 using namespace std;
 int main() {

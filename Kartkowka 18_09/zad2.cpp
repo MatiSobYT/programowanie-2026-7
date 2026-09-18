@@ -1,3 +1,4 @@
+//Napisz program, który pobierze od użytkownika liczbę całkowitą, a następnie sprawdzi, czy jest ona liczbą pierwszą.
 #include <iostream>
 using namespace std;
 int main() {
