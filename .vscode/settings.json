@@ -1,0 +1,4 @@
+{
+    "C_Cpp.autocomplete": "disabled",
+    "[cpp]": {"editor.wordBasedSuggestions": "off"}
+}
