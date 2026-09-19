@@ -52,5 +52,4 @@ int main(){
             goto back;
         }
     }
-    return 0;
 }
