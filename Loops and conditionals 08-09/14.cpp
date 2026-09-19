@@ -29,7 +29,7 @@ int main(){
     }
     else if(wybor==5){
         double potega=a;
-        for(int i=1; i<=b; i++){
+        for(int i=1; i<b; i++){
             potega=potega*a;
         }
         cout<<"Wynik potegowania: "<<potega;
