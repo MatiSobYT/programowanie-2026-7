@@ -5,25 +5,32 @@ bool czyPierwsza(int liczba);
 int sumaCyfr(int liczba);
 int liczbaCyfr(int liczba);
 int main() {
-    int liczba;
-    cout<<"Podaj liczbe: ";
-    cin>>liczba;
-    if (czyParzysta(liczba)==true) {
-        cout<<"Liczba jest parzysta"<<endl;
+    while(true){
+        int liczba;
+        cout<<"Podaj liczbe: ";
+        cin>>liczba;
+        if(liczba==0){
+            cout<<"Koniec programu";
+            break;
+        }
+        else{
+            if (czyParzysta(liczba)==true) {
+                cout<<"Liczba jest parzysta"<<endl;
+            }
+            else {
+                cout<<"Liczba jest nieparzysta"<<endl;
+            }
+            if (czyPierwsza(liczba)==true) {
+                cout<<"Liczba jest pierwsza"<<endl;
+            }
+            else {
+                cout<<"Liczba nie jest pierwsza"<<endl;
+            }
+            cout<<"Suma cyfr: "<<sumaCyfr(liczba)<<endl;
+            cout<<"Liczba cyfr: "<<liczbaCyfr(liczba)<<endl;
+        }
     }
-    else {
-        cout<<"Liczba jest nieparzysta"<<endl;
-    }
-    if (czyPierwsza(liczba)==true) {
-        cout<<"Liczba jest pierwsza"<<endl;
-    }
-    else {
-        cout<<"Liczba nie jest pierwsza"<<endl;
-    }
-    cout<<"Suma cyfr: "<<sumaCyfr(liczba)<<endl;
-    cout<<"Liczba cyfr: "<<liczbaCyfr(liczba)<<endl;
 }
-
 bool czyParzysta(int liczba) {
     if (liczba%2==0) {
         return true;
@@ -32,7 +39,6 @@ bool czyParzysta(int liczba) {
         return false;
     }
 }
-
 bool czyPierwsza(int liczba) {
     int licznik=0;
     for (int i=2; i<liczba; i++) {
