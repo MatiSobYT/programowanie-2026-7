@@ -1,4 +1,4 @@
-//WINDOWS ONLY i opp=opponent points/punkty przeciwnika
+//WINDOWS ONLY i opp=opponent points/punkty przeciwnika i diff=difficulty/poziom trudnosci
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -10,9 +10,16 @@ bool komputerDobiera(int punkty, int diff);
 bool BLACKJACK(int punkty);
 int main(){
     srand(time(NULL));
-    int wybor, wylos, win=0, loss=0, remis=0, diff;
+    int wybor, wylos, win=0, loss=0, remis=0, diff, blackjacks=0;
+    cofka:
+    //Poziomy trudnosci
     cout<<"Wybierz poziom trudnosci"<<endl<<"1 - Latwy"<<endl<<"2 - Normalny"<<endl<<"3 - Trudny"<<endl<<"Twoj wybor: ";
     cin>>diff;
+    if(diff<1 || diff>3){
+        cout<<"Bledny wybor sprobuj ponownie"<<endl;
+        goto cofka;
+    }
+    else{
     start:
     int graczp=0, opp=0;
     graczp=losujLiczbe();
@@ -24,8 +31,9 @@ int main(){
         cin>>wybor;
         if(wybor==1){
             wylos=dobierzLiczbe(graczp);
+            //Szczesliwa liczba
             if(wylos==11){
-                cout<<"Wylosowales 11!"<<endl<<"1 - Zachowaj 11"<<endl<<"2 - Zamien na 1"<<endl<<"Twoj wybor: ";
+                cout<<"\033[42m"<<"Wylosowales 11!"<<"\033[0m"<<endl<<"1 - Zachowaj 11"<<endl<<"2 - Zamien na 1"<<endl<<"Twoj wybor: ";
                 cin>>wybor;
                 if(wybor==1){
                     goto leave;
@@ -41,12 +49,14 @@ int main(){
             swap:
             cout<<"Gracz ma: "<<graczp<<" punktow"<<endl;
             if(czyPrzekroczono21(graczp)==true){
-                cout<<"PRZEKROCZYLES 21!"<<endl<<"PRZEGRANA"<<endl;
+                cout<<"\033[41m"<<"PRZEKROCZYLES 21!"<<endl<<"PRZEGRANA"<<"\033[0m"<<endl;
                 loss++;
                 break;
             }
+            //Customer request V
             if(BLACKJACK(graczp)==true){
-                cout<<"BLACKJACK!"<<endl;
+                cout<<"\033[44m"<<"BLACKJACK!"<<"\033[0m"<<endl;
+                blackjacks++;
                 goto pass;
             }
             goto back;
@@ -69,33 +79,36 @@ int main(){
             system("pause");
         }
         if(czyPrzekroczono21(opp)==true){
-            cout<<"KOMPUTER PRZEKROCZYL 21!"<<endl<<"WYGRANA"<<endl;
+            cout<<"\033[42m"<<"KOMPUTER PRZEKROCZYL 21!"<<endl<<"WYGRANA"<<"\033[0m"<<endl;
             win++;
             break;
         }
+        //Also customer request V
         if(BLACKJACK(opp)==true){
-            cout<<"BLACKJACK!"<<endl;
+            cout<<"\033[44m"<<"BLACKJACK!"<<"\033[0m"<<endl;
+            blackjacks++;
         }
         cout<<"Komputer pasuje"<<endl;
         system("pause");
         //Porownanie
         cout<<"=========="<<endl<<"KONIEC GRY"<<endl<<"=========="<<endl<<"Gracz: "<<graczp<<endl<<"Komputer: "<<opp<<endl;
         if(graczp>opp){
-            cout<<"WYGRYWASZ!"<<endl;
+            cout<<"\033[42m"<<"WYGRYWASZ!"<<"\033[0m"<<endl;
             win++;
             break;
         }
         else if(opp>graczp){
-            cout<<"PRZEGRYWASZ!"<<endl;
+            cout<<"\033[41m"<<"PRZEGRYWASZ!"<<"\033[0m"<<endl;
             loss++;
             break;
         }
         else{
-            cout<<"REMIS!"<<endl;
+            cout<<"\033[48;5;242m"<<"REMIS!"<<"\033[0m"<<endl;
             remis++;
             break;
         }
     }
+    //Pytanie o ponowna rozgrywke
     end:
     cout<<"Czy chcesz zagrac jeszcze raz?"<<endl<<"1 - Tak"<<endl<<"2 - Nie"<<endl<<"Twoj wybor: ";
     cin>>wybor;
@@ -103,12 +116,13 @@ int main(){
         goto start;
     }
     else if(wybor==2){
-        cout<<"=========="<<endl<<"STATYSTYKI"<<endl<<"=========="<<endl<<"Wygrane: "<<win<<endl<<"Przegrane: "<<loss<<endl<<"Remisy: "<<remis;
+        cout<<"=========="<<endl<<"STATYSTYKI"<<endl<<"=========="<<endl<<"\033[42m"<<"Wygrane: "<<win<<"\033[0m"<<endl<<"\033[41m"<<"Przegrane: "<<loss<<"\033[0m"<<endl<<"\033[48;5;242m"<<"Remisy: "<<remis<<"\033[0m"<<endl<<"\033[44m"<<"BlackJacki: "<<blackjacks<<"\033[0m";
         return 0;
     }
     else{
         cout<<"Bledny wybor sprobuj ponownie"<<endl;
         goto end;
+    }
     }
 }
 int losujLiczbe(){
@@ -134,7 +148,7 @@ bool komputerDobiera(int punkty, int diff){
             return false;
         }
     }
-    if(diff==2){
+    else if(diff==2){
         if(punkty<16){
             return true;
         }
@@ -150,7 +164,7 @@ bool komputerDobiera(int punkty, int diff){
             }
         }
     }
-    if(diff==3){
+    else if(diff==3){
         if(punkty<17){
             return true;
         }
@@ -175,6 +189,7 @@ bool komputerDobiera(int punkty, int diff){
         }
     }
 }
+//Customer request V
 bool BLACKJACK(int punkty){
     if(punkty==21){
         return true;
