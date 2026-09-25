@@ -45,7 +45,6 @@ int main(){
         }
         else{
             cout<<"Bledny wybor sprobuj ponownie"<<endl;
-            system("pause");
             goto back;
         }
         if(ophp<1){
