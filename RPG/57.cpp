@@ -12,6 +12,7 @@ int main(){
     srand(time(NULL));
     int graczhp=100, ophp=100, wybor, dmg, heal, opwybor;
     while(true){
+        back:
         //Tura gracza
         cout<<"=====RPG DLA BIEDNYCH====="<<endl<<endl<<"Gracz: "<<graczhp<<" HP"<<endl<<"Opponent: "<<ophp<<" HP"<<endl<<endl<<"1 - Zwykly atak"<<endl<<"2 - Leczenie"<<endl<<"3 - Silny atak"<<endl<<endl<<"Wybierz akcje: ";
         cin>>wybor;
@@ -45,6 +46,7 @@ int main(){
         else{
             cout<<"Bledny wybor sprobuj ponownie"<<endl;
             system("pause");
+            goto back;
         }
         if(ophp<1){
             cout<<"Zwyciestwo!";

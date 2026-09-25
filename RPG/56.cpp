@@ -1,4 +1,4 @@
-//WINDOWS ONLY
+//WINDOWS ONLY i op=opponent/przeciwnik
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -11,6 +11,8 @@ int main(){
     srand(time(NULL));
     int graczhp=100, ophp=100, wybor, dmg, heal;
     while(true){
+        back:
+        //Tura gracza
         cout<<"=====RPG DLA BIEDNYCH====="<<endl<<endl<<"Gracz: "<<graczhp<<" HP"<<endl<<"Opponent: "<<ophp<<" HP"<<endl<<endl<<"1 - Zwykly atak"<<endl<<"2 - Leczenie"<<endl<<"3 - Silny atak"<<endl<<endl<<"Wybierz akcje: ";
         cin>>wybor;
         if(wybor==1){
@@ -43,11 +45,13 @@ int main(){
         else{
             cout<<"Bledny wybor sprobuj ponownie"<<endl;
             system("pause");
+            goto back;
         }
         if(ophp<1){
             cout<<"Zwyciestwo!";
             break;
         }
+        //Tura przeciwnika
         dmg=opAtk();
         graczhp=graczhp-dmg;
         cout<<"Przeciwnik zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
