@@ -1,4 +1,4 @@
-//WINDOWS ONLY
+//WINDOWS ONLY i op=opponent/przeciwnik
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -7,10 +7,12 @@ int zwyklyAtak();
 int silnyAtak();
 int lecz();
 int opAtk();
+int losujAkcjePrzeciwnika();
 int main(){
     srand(time(NULL));
-    int graczhp=100, ophp=100, wybor, dmg, heal;
+    int graczhp=100, ophp=100, wybor, dmg, heal, opwybor;
     while(true){
+        //Tura gracza
         cout<<"=====RPG DLA BIEDNYCH====="<<endl<<endl<<"Gracz: "<<graczhp<<" HP"<<endl<<"Opponent: "<<ophp<<" HP"<<endl<<endl<<"1 - Zwykly atak"<<endl<<"2 - Leczenie"<<endl<<"3 - Silny atak"<<endl<<endl<<"Wybierz akcje: ";
         cin>>wybor;
         if(wybor==1){
@@ -48,14 +50,42 @@ int main(){
             cout<<"Zwyciestwo!";
             break;
         }
-        dmg=opAtk();
-        graczhp=graczhp-dmg;
-        cout<<"Przeciwnik zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
+        //Tura przeciwnika
+        cout<<"Przeciwnik wybral: ";
+        opwybor=losujAkcjePrzeciwnika();
+        if(opwybor=1){
+            dmg=opAtk();
+            graczhp=graczhp-dmg;
+            cout<<"ZWYKLY ATAK"<<endl<<"Przeciwnik zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
+            system("pause");
+        }
+        else if(opwybor=2){
+            cout<<"LECZENIE"<<endl;
+            heal=lecz();
+            ophp=ophp+heal;
+            cout<<"Przeciwnik odzyskuje: "<<heal<<" HP"<<endl;
+            if(ophp>100){
+                ophp=100;
+            }
+            cout<<"Przeciwnik: "<<ophp<<" HP"<<endl;
+            system("pause");
+        }
+        else{
+            cout<<"SILNY ATAK"<<endl;
+            dmg=silnyAtak();
+            if(dmg==0){
+                cout<<"Silny atak przeciwnika nie udal sie!"<<endl;
+            }
+            else{
+                graczhp=graczhp-dmg;
+                cout<<"Przeciwnik zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
+            }
+            system("pause");
+        }
         if(graczhp<1){
             cout<<"Przegrana!";
             break;
         }
-        system("pause");
     }
     return 0;
 }
@@ -76,4 +106,16 @@ int silnyAtak(){
 }
 int lecz(){
     return rand()%11+5;
+}
+int losujAkcjePrzeciwnika(){
+    int los=rand()%100+1;
+    if(los<=60){
+        return 1;
+    }
+    else if(los<=85){
+        return 2;
+    }
+    else{
+        return 3;
+    }
 }
