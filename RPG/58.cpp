@@ -61,10 +61,9 @@ int main(){
             system("pause");
         }
         else if(opwybor=2){
-            cout<<"LECZENIE"<<endl;
             heal=lecz();
             ophp=ophp+heal;
-            cout<<"Przeciwnik odzyskuje: "<<heal<<" HP"<<endl;
+            cout<<"LECZENIE"<<endl<<"Przeciwnik odzyskuje: "<<heal<<" HP"<<endl;
             if(ophp>100){
                 ophp=100;
             }
@@ -133,5 +132,4 @@ int losujAkcjePrzeciwnika(int hp){
             return 3;
         }
     }
-    
 }
