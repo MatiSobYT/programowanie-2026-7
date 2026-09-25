@@ -43,7 +43,6 @@ int main(){
                 loss++;
                 break;
             }
-            //Customer request V
             if(BLACKJACK(graczp)==true){
                 cout<<"BLACKJACK!"<<endl;
                 goto pass;
@@ -95,6 +94,7 @@ int main(){
             break;
         }
     }
+    //Pytanie o ponowna rozgrywke
     end:
     cout<<"Czy chcesz zagrac jeszcze raz?"<<endl<<"1 - Tak"<<endl<<"2 - Nie"<<endl<<"Twoj wybor: ";
     cin>>wybor;
