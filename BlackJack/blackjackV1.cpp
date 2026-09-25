@@ -41,6 +41,7 @@ int main(){
             cout<<"Komputer dobiera..."<<endl<<"Wylosowal: "<<wylos<<" punktow"<<endl;
             opp=opp+wylos;
             cout<<"Komputer ma: "<<opp<<" punktow"<<endl;
+            system("pause");
         }
         if(czyPrzekroczono21(opp)==true){
             cout<<"KOMPUTER PRZEKROCZYL 21!"<<endl<<"WYGRANA";
@@ -48,6 +49,7 @@ int main(){
         }
         cout<<"Komputer pasuje"<<endl;
         system("pause");
+        //Porownanie
         cout<<"=========="<<endl<<"KONIEC GRY"<<endl<<"=========="<<endl<<"Gracz: "<<graczp<<endl<<"Komputer: "<<opp<<endl;
         if(graczp>opp){
             cout<<"WYGRYWASZ!";
