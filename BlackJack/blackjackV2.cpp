@@ -6,6 +6,7 @@ int losujLiczbe();
 int dobierzLiczbe(int punkty);
 bool czyPrzekroczono21(int punkty);
 bool komputerDobiera(int punkty);
+bool BLACKJACK(int punkty);
 int main(){
     srand(time(NULL));
     int graczp=0, opp=0, wybor, wylos;
@@ -38,6 +39,10 @@ int main(){
                 cout<<"PRZEKROCZYLES 21!"<<endl<<"PRZEGRANA";
                 break;
             }
+            if(BLACKJACK(graczp)==true){
+                cout<<"BLACKJACK!"<<endl;
+                goto pass;
+            }
             goto back;
         }
         else if(wybor==2){
@@ -48,6 +53,7 @@ int main(){
             cout<<"Bledny wybor sprobuj ponownie"<<endl;
             goto back;
         }
+        pass:
         //Tura komputera
         while(komputerDobiera(opp)==true){
             wylos=dobierzLiczbe(opp);
@@ -59,6 +65,9 @@ int main(){
         if(czyPrzekroczono21(opp)==true){
             cout<<"KOMPUTER PRZEKROCZYL 21!"<<endl<<"WYGRANA";
             break;
+        }
+        if(BLACKJACK(opp)==true){
+            cout<<"BLACKJACK!"<<endl;
         }
         cout<<"Komputer pasuje"<<endl;
         system("pause");
@@ -106,5 +115,13 @@ bool komputerDobiera(int punkty){
         else{
             return false;
         }
+    }
+}
+bool BLACKJACK(int punkty){
+    if(punkty==21){
+        return true;
+    }
+    else{
+        return false;
     }
 }
