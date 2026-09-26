@@ -49,7 +49,7 @@ int main(){
             swap:
             cout<<"Gracz ma: "<<graczp<<" punktow"<<endl;
             if(czyPrzekroczono21(graczp)==true){
-                cout<<"\033[41m"<<"PRZEKROCZYLES 21!"<<endl<<"PRZEGRANA"<<"\033[0m"<<endl;
+                cout<<"\033[41m"<<"PRZEKROCZYLES 21!"<<"\033[0m"<<endl<<"\033[41m"<<"PRZEGRANA"<<"\033[0m"<<endl;
                 loss++;
                 break;
             }
@@ -79,7 +79,7 @@ int main(){
             system("pause");
         }
         if(czyPrzekroczono21(opp)==true){
-            cout<<"\033[42m"<<"KOMPUTER PRZEKROCZYL 21!"<<endl<<"WYGRANA"<<"\033[0m"<<endl;
+            cout<<"\033[42m"<<"KOMPUTER PRZEKROCZYL 21!"<<"\033[0m"<<endl<<"\033[42m"<<"WYGRANA"<<"\033[0m"<<endl;
             win++;
             break;
         }
