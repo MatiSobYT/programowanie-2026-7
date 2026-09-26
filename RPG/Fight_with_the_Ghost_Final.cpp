@@ -54,13 +54,13 @@ int main(){
         //Tura ducha
         cout<<"Ghost wybral: ";
         opwybor=losujAkcjePrzeciwnika(ophp);
-        if(opwybor=1){
+        if(opwybor==1){
             dmg=opAtk();
             graczhp=graczhp-dmg;
             cout<<"ZWYKLY ATAK"<<endl<<"Ghost zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
             system("pause");
         }
-        else if(opwybor=2){
+        else if(opwybor==2){
             heal=lecz();
             ophp=ophp+heal;
             cout<<"LECZENIE"<<endl<<"Ghost odzyskuje: "<<heal<<" HP"<<endl;

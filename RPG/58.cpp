@@ -54,13 +54,13 @@ int main(){
         //Tura przeciwnika
         cout<<"Przeciwnik wybral: ";
         opwybor=losujAkcjePrzeciwnika(ophp);
-        if(opwybor=1){
+        if(opwybor==1){
             dmg=opAtk();
             graczhp=graczhp-dmg;
             cout<<"ZWYKLY ATAK"<<endl<<"Przeciwnik zadaje: "<<dmg<<" obrazen"<<endl<<"Gracz: "<<graczhp<<" HP"<<endl;
             system("pause");
         }
-        else if(opwybor=2){
+        else if(opwybor==2){
             heal=lecz();
             ophp=ophp+heal;
             cout<<"LECZENIE"<<endl<<"Przeciwnik odzyskuje: "<<heal<<" HP"<<endl;
