@@ -1,4 +1,4 @@
-#include <iostream> //aktualnie broken pozniej naprawie
+#include <iostream>
 #include <string>
 using namespace std;
 int main() {
@@ -7,17 +7,17 @@ int main() {
     string zdanie, lng;
     cout<<"Napisz zdanie: ";
     getline(cin, zdanie);
-    for (int i=0; i<zdanie.length(); i++) {
-        if (zdanie[i]==' ') {
-            temp=i-1;
-        }
-        if (temp>dlugosc) {
-            lng="";
-            for (int j=poczatek; j<i; j++) {
-                lng.push_back(zdanie[j]);
+    for (int i=0; i<=zdanie.length(); i++) {
+        if (zdanie[i]==' ' || i==zdanie.length()) {
+            temp=i-poczatek;
+                if (temp>=dlugosc) {
+                lng="";
+                for (int j=poczatek; j<i; j++) {
+                    lng.push_back(zdanie[j]);
+                }
+                dlugosc=temp;
             }
-            dlugosc=temp;
-            poczatek=i;
+            poczatek=i+1;
         }
     }
     cout<<"Dlugosc najdluzszego wyrazu: "<<dlugosc<<endl<<"Najdluzszy wyraz: "<<lng;
