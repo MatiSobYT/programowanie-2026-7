@@ -6,12 +6,99 @@
         <title>Formularze</title>
     </head>
     <body>
-        <form action="index.php" method="get">
-            <label for="do_imienia">Podaj imie: </label>
-            <input type="text" name="imie" id="do_imienia"><br><br>
-            <label>Podaj nazwisko:
-            <input type="text" name="nazwisko"></label><br>
-            <input type="submit" value="Wysylka">
+        <form action="index.php" method="get"><br>
+            <fieldset><legend>Dane Osobowe</legend>
+                <label for="do_imienia">Podaj imie: </label>
+                <input type="text" name="imie" id="do_imienia" required><br><br>
+                <label>Podaj mail:
+                <input type="mail" name="mail"></label><br>
+                <input type="submit" value="Wysylka">
+            </fieldset>
+            <hr>
+            <label for="dane">Podaj imie i nazwisko</label>
+            <input type="text" name="imie1" id="dane" placeholder="Kliknij aby wpisac dane"><br><br>
+            <label for="dane2">Podaj imie i nazwisko</label>
+            <input type="text" name="imie2" id="dane2" value="Krzysztof Betclic"><br>
+            <input type="submit" value="Przesylka">
+            <hr>
+            <label for="dane3">Podaj swoje imie i nazwisko</label>
+            <input type="text" name="imie3" id="dane3" placeholder="imie i nazwisko"><br>
+            <input type="checkbox" name="czek" id="dane4">
+            <label for="dane4">Zgadzam sie na przetwarzanie moich danych</label><br><br>
+            <input type="submit" value="Odsylka">
+            <input type="reset" value="Czyść">
+            <hr>
         </form>
+        <h3>Ćwiczenie checkbox</h3>
+        <p>Jaki pojazd posiadasz?</p>
+        <form action="index2.php" method="get">
+            <input type="checkbox" name="check1" id="check1">
+            <label for="check1">posiadam rower</label><br>
+            <input type="checkbox" name="check2" id="check2">
+            <label for="check2">posiadam samochod</label><br>
+            <input type="checkbox" name="check3" id="check3" checked>
+            <label for="check3">posiadam rolki</label><br><br>
+            <input type="submit" value="Dosylka">
+            <input type="reset" value="Czyścik">
+            <hr>
+        </form>
+        <h2>---- Radio ----</h2>
+        <p>Jaki jezyk programowania znasz?</p>
+        <form action="index3.php" method="get">
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio1">C</label><br>
+            <input type="radio" name="radio" id="radio2">
+            <label for="radio2">C++</label><br>
+            <input type="radio" name="radio" id="radio3">
+            <label for="radio3">Python</label><br><br>
+            <input type="submit" value="Rozsylka">
+            <hr>
+        </form>
+        <h2>---- Password ----</h2>
+        <form action="index4.php" method="post">
+            <label for="pswd">Podaj haslo:</label>
+            <input type="password" name="haszlo" id="pswd" size="10" maxlength="10" minlength="8"><br>
+            <input type="submit" value="Podsylka">
+            <input type="reset" value="Czystka">
+            <hr>
+        </form>
+        <h2>----Plik----</h2>
+        <form action="index5.php" enctype="multipart/form-data">
+            <label for="plik">Wysylka plika:</label>
+            <input type="file" name="Pliczek" id="plik" value="Ziomek ERROR"><br>
+            <input type="reset" value="Śmietnik">
+            <hr>
+        </form>
+        <h1>Informacje</h1><br>
+        <form action="index6.php" method="get">
+            <fieldset>
+                <legend>Dane Osobowe</legend><br>
+                <label for="FN">First name:</label><br>
+                <input type="text" name="Imiąko" id="FN"><br><br>
+                <label for="LN">Last name:</label><br>
+                <input type="text" name="Nazwisk" id="LN"><br><br>
+                <label for="Mjl">Email:</label><br>
+                <input type="mail" name="mejl" id="Mjl"><br><br>
+                <label for="data">Birthday:</label>
+                <input type="date"><br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Wyksztalcenie</legend>
+                <input type="radio" name="Radyjko" id="radjo1">
+                <label for="radjo1">Uniwersytet</label><br>
+                <input type="radio" name="Radyjko" id="radjo2">
+                <label for="radjo2">Politechnika</label><br>
+                <input type="radio" name="Radyjko" id="radjo3">
+                <label for="radjo3">Akademia</label>
+            </fieldset><br>
+            <input type="submit" value="Zsylka">
+            <hr>
+        </form>
+        <select name="wybor">
+            <option value="raz">1</option>
+            <option value="dwa">2</option>
+            <option value="try">3</option>
+        </select>
     </body>
 </html>
