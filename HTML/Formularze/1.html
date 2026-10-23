@@ -100,5 +100,148 @@
             <option value="dwa">2</option>
             <option value="try">3</option>
         </select>
+        <hr>
+        <form action="index7.php" method="get">
+            <label for="IM">Imie: </label><br>
+            <input type="text" name="Imie4" id="IM"><br>
+            <label for="NZ">Nazwisko: </label><br>
+            <input type="text" name="zwisko" id="NZ"><br><br>
+            <p>Plec:</p>
+            <input type="radio" name="meinradio" id="radio8">
+            <label for="radio8">Kobieta</label>
+            <input type="radio" name="meinradio" id="radio9" checked>
+            <label for="radio9">Mezczyzna</label><br><br>
+            <p>Wiek:</p>
+            <select name="wiek">
+                <option value="Npelnoletni">0-17</option>
+                <option value="Pelnyletni">18-26</option>
+                <option value="Emeryt">27+</option>
+            </select><br><br>
+            <p>Wybierz jezyk:</p>
+            <select name="lingua" size="2" required multiple>
+                <option value="English">Jezyk Angielski</option>
+                <option value="Deutsch">Jezyk Niemiecki</option>
+                <option value="Espanol">Jezyk Hiszpanski</option>
+                <option value="Italiano">Jezyk Wloski</option>
+            </select>
+            <p>Uwagi:</p>
+            <textarea name="tekscik" rows="8" cols="16">Wpisz uwagi</textarea><br>
+            <input type="submit" value="Kwita">
+            <input type="reset" value="Kasacja">
+            <hr>
+        </form><br>
+        <select name="" size="6" multiple>
+            <optgroup label="auta">
+                <option value="volovina">Volvo</option>
+                <option value="volkswan">Volkswagen</option>
+            </optgroup>
+            <optgroup label="avtobus">
+                <option value="Solaris">Solaris</option>
+                <option value="Setra">Setra</option>
+            </optgroup>
+        </select><br><hr>
+        <select name="" size="8">
+            <optgroup label="Dziewczeta">
+                <option value="Tiny">12-14 lat</option>
+                <option value="Smol">15-17 lat</option>
+                <option value="Big">powyzej 18 lat</option>
+            </optgroup>
+            <optgroup label="Chlopcy">
+                <option value="Tiny">12-14 lat</option>
+                <option value="Smol">15-17 lat</option>
+                <option value="Big">powyzej 18 lat</option>
+            </optgroup>
+        </select><br><hr>
+        <form action="index8.php" method="get">
+            <label for="mejlik">E-mail:</label>
+            <input type="email" name="mil" id="mejlik" placeholder="Wpisz adres email"><br>
+            <label for="szukajka">Szukaj:</label>
+            <input type="search" name="szuk" id="szukajka" placeholder="Wpisz szukany tekst"><br>
+            <label for="suwak">Wybierz wartosc od 1 do 5</label>
+            <input type="range" min="1" max="5" value="1" step="0.001"><br>
+            <label for="numerek">lub</label><br>
+            <input type="number" min="1" max="5" value="3" step="0.05"><br>
+            <label for="kolorek">Wybierz kolor:</label>
+            <input type="color"><br>
+            <label for="cakeday">Wprowadz date urodzin:</label>
+            <input type="date" max="2026-10-23" value="1025-04-18"><br>
+            <input type="submit" value="Asygnata">
+            <input type="reset" value="Odrzucam">
+        </form><br><hr>
+        <form action="index9.php" method="get">
+            <input type="text" list="imiona">
+            <datalist id="imiona">
+                <option>Adam</option>
+                <option>Adrian</option>
+                <option>Andrzej</option>
+                <option>Ziomek</option>
+                <option>Ziutek</option>
+            </datalist>
+            <input type="text" list="licencja">
+            <datalist id="licencja">
+                <option>Prawko</option>
+                <option>Lewko</option>
+            </datalist>
+        </form><br><hr>
+        <form action="index10.php" method="get">
+            <label for="owoc"><b>Wybierz owoc:</b></label>
+            <input type="text" list="owocki" id="owoc">
+            <datalist id="owocki">
+                <option>Jablko</option>
+                <option>Papierowka</option>
+                <option>Bananini</option>
+                <option>Mango</option>
+                <option>Kiwi</option>
+            </datalist>
+        </form><br><br><hr>
+        <form action="index11.php" method="get">
+            <fieldset>
+                <legend>Dane osobowe</legend>
+                <label for="imio">Imie:</label>
+                <input type="text" id="imio" value="podaj imie"><br>
+                <label for="nazwa">Nazwisko:</label>
+                <input type="text" id="nazwa" placeholder="podaj nazwisko"><br>
+                <label for="uro">Data urodzenia:</label>
+                <input type="date" id="uro" max="2026-10-23"><br>
+                <label for="place">Miejsce urodzenia:</label>
+                <input type="text" list="miasta" id="place">
+                <datalist id="miasta">
+                    <option>Ksawerow</option>
+                    <option>Zgierz</option>
+                    <option>Pabianice</option>
+                    <option>Lutomiersk</option>
+                </datalist>
+                <label for="telephon">Nr Telefonu:</label>
+                <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="000-000-000">
+            </fieldset>
+            <fieldset>
+                <legend>Pozostale informacje:</legend>
+                <p>
+                    Wyksztalcenie:
+                    <input type="radio" name="kolo" id="edu1">
+                    <label for="edu1">podstawowe</label>
+                    <input type="radio" name="kolo" id="edu2">
+                    <label for="edu2">srednie</label>
+                    <input type="radio" name="kolo" id="edu3">
+                    <label for="edu3">wyzsze</label><br>
+                    Lub:
+                    <select name="cation">
+                        <option value="NULL">wybierz opcje</option>
+                        <option value="niskie">podstawowe</option>
+                        <option value="srednie">srednie</option>
+                        <option value="wysokie">wyzsze</option>
+                    </select>
+                </p>
+                <label for="zawod">Zawod wykonywany:</label>
+                <input type="text" id="zawod"><br><br>
+                <p>
+                    Dodatkowe umiejetnosci:
+                    <textarea rows="10" cols="30"></textarea>
+                </p>
+            </fieldset><br>
+            <input type="checkbox" id="TOS" checked required>
+            <label for="TOS">Akceptuje regulamin</label><br><br>
+            <input type="submit" value="Finito">
+        </form><hr>
     </body>
 </html>
