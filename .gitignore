@@ -3,3 +3,6 @@
 *.pdb
 GeminiPro/
 HTML/Formularze/gemini/
+.VSCodeCounter/**/*
+!.VSCodeCounter/**/
+!.VSCodeCounter/**/*.md
