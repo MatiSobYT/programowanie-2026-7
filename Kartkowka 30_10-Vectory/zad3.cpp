@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 int main() {
-    int temp, licznik=0, licznikk=0;
+    int temp, licznik=1, licznikk=1;
     vector<int> v;
     for (int i=0; i<12; i++) {
         cout<<"Podaj liczbe: ";
@@ -16,9 +16,9 @@ int main() {
         else{
             licznikk=1;
         }
-    }
-    if (licznikk>licznik) {
+        if (licznikk>licznik) {
         licznik=licznikk;
+        }
     }
     cout<<"Dlugosc najdluzszego fragmentu wektora z jednakowymi znakami: "<<licznik;
 }
