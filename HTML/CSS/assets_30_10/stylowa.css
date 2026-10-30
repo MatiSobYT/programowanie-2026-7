@@ -1,0 +1,21 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.719);
+}
+/* Omowienie roznych kolorow gradientow i mieszania*/
+/* Omow font-family*/
+h2{
+    background-color: burlywood;
+    color: blanchedalmond;
+    text-align: right;
+    margin-left: 100px;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    color: wheat;
+    background-color: blueviolet;
+}

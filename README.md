@@ -1,2 +1,3 @@
 # programowanie-2026-7
-Pozdrawiam
+Pozdrawiam <br>
+## [Lista rozszerzen VSCode](./vsc_extensions.md)

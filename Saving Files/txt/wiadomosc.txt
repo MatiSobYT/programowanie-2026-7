@@ -1,0 +1,3 @@
+Dzisiaj jest piekny dzien
+Ucze sie jezyka C++
+Potrafie zapisywac dane do pliku

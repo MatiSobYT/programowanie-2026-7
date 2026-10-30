@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartkowka</title>
+</head>
+<body>
+    <form action="index.php" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Formularz Osobowy</legend>
+            <label for="imie">Podaj swoje imie:</label>
+            <input type="text" id="imie" name="imie"><br>
+            <label for="kolor">Podaj swoj ulubiony kolor:</label>
+            <input type="color"><br>
+            <label for="lista">Wybierz ulubiony gatunek filmowy:</label>
+            <select id="lista">
+                <option name="komedia">Komedia</option>
+                <option name="scifi">Sci-Fi</option>
+                <option name="dramat">Dramat</option>
+            </select><br>
+            <label for="uro">Podaj date urodzenia:</label>
+            <input type="date"><br>
+            <label for="lata">Zaznacz ile masz lat:</label>
+            <input type="range" min="1" max="20" value="5"><br>
+            <label for="majl">Podaj swoj adres email:</label>
+            <input type="email" placeholder="adres@cos.pl"><br><br>
+            <p>Jaka mamy dzisiaj pogode:</p><br>
+            <input type="radio" name="ratio" id="pogoda1" checked>
+            <label for="pogoda1">Slonecznie</label>
+            <input type="radio" name="ratio" id="pogoda2">
+            <label for="pogoda2">Deszczowo</label>
+            <input type="radio" name="ratio" id="pogoda3">
+            <label for="pogoda3">Pochmurnie</label><br>
+            <label for="jotka">Imiona na litere "j":</label>
+            <input type="text" id="jotka" name="jotek" list="listajot">
+            <datalist id="listajot">
+                <option>Jadwiga</option>
+                <option>Jan</option>
+                <option>Jozef</option>
+            </datalist>
+        </fieldset><br>
+        <label for="pliczek">Dolacz swoje zdjecie:</label>
+        <input type="file" id="pliczek" name="fajl"><br>
+        <label for="kodzik">Podaj kod pocztowy:</label>
+        <input type="text" id="kodzik" name="kodek" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000"><br>
+        <label for="haslo">Podaj haslo:</label>
+        <input type="password" id="haslo" name="passwd" placeholder="****" minlength="4" maxlength="10" size="11"><br>
+        <input type="submit" value="Przeslij">
+        <input type="reset" value="Wyczysc"><br>
+        <textarea rows="5" cols="10">Uwagi</textarea>
+    </form>
+</body>
+</html>
