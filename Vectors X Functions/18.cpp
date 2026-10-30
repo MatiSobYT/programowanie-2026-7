@@ -18,7 +18,7 @@ int main() {
     cout<<"Indeks najmniejszego elementu: "<<indeksMinimum(v);
 }
 int indeksMinimum(vector<int> v) {
-    int najmn=INT_MAX, ret;
+    int najmn=INT32_MAX, ret;
     for (int i=0; i<v.size(); i++) {
         if (v.at(i)<najmn) {
             najmn=v.at(i);

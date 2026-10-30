@@ -15,9 +15,9 @@ int main() {
     cout<<"Drugie najwieksze rozne maksimum w wektorze: "<<drugieNajwieksze(v);
 }
 int drugieNajwieksze(vector<int> v) {
-    int max=INT_MIN, dwumax=INT_MIN;
+    int max=INT32_MIN, dwumax=INT32_MIN;
     if (v.size()<2) {
-        return INT_MIN;
+        return INT32_MIN;
     }
     for (int liczba : v) {
         if (liczba>max) {
