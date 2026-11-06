@@ -1,0 +1,5 @@
+Witaj świecie! To jest pierwsza linijka tekstu testowego.
+C++ to potężny język programowania, który radzi sobie z plikami bez problemu.
+W tej linii mamy kilka liczb: 12, 34 oraz 56.
+Programowanie bywa wyzwaniem, ale daje ogromną satysfakcję.
+To już ostatnie zdanie w tym pliku. Powodzenia z kodem!
