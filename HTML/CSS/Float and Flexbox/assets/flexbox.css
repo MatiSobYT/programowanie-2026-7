@@ -1,0 +1,34 @@
+#kontener{
+    background-color: palevioletred;
+    margin: 0 auto;
+    /* height: 800px; */
+}
+#bloczki{
+    background-color: yellow;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 10px; */
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+}
+.box{
+    background-color: rebeccapurple;
+    /* margin: 5px; */
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#podploczki{
+    background-color: powderblue;
+    height: 800px;
+    width: 10%;
+    float: left;
+}
+#podbloczki{
+    background-color: aquamarine;
+    clear: both;
+}

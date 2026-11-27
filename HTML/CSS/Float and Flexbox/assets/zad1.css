@@ -1,0 +1,30 @@
+header{
+    background-color: brown;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+aside{
+    background-color: violet;
+    width: 30%;
+    float: left;
+    min-height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+main{
+    background-color: tomato;
+    width: 70%;
+    float: left;
+    min-height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+footer{
+    background-color: coral;
+    clear: both;
+}
+footer p{
+    text-align: right;
+}

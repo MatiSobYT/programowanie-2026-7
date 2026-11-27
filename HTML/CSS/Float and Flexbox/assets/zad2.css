@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+}
+header{
+    text-align: center;
+    background-color: darkgoldenrod;
+    box-sizing: border-box;
+}
+nav, footer{
+    background-color: tomato;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+nav p, footer p{
+    text-align: center;
+    color: rgb(255, 185, 185);
+    padding: 10px;
+}
+footer{
+    clear: both;
+}
+main{
+    width: 70%;
+    float: left;
+    min-height: 400px;
+    padding: 20px;
+    background-color: tan;
+}
+aside{
+    text-align: center;
+    background-color: aquamarine;
+    min-height: 400px;
+    padding: 20px;
+}
+section{
+    background-color: yellow;
+    margin: 10px auto;
+    padding: 1%;
+}

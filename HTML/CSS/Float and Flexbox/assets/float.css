@@ -1,0 +1,31 @@
+#kontener{
+    background-color: blueviolet;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 2%;
+    border: 10px red solid;
+    /* box-sizing: border-box; */
+}
+#bloczki{
+    background-color: yellowgreen;
+}
+#podbloczki{
+    margin-top: 20px;
+    background-color: orangered;
+    clear: both;
+}
+.box{
+    background-color: aqua;
+    width: 25%;
+    float: left;
+    min-height: 300px;
+    margin: 2px;
+    margin-left: 15px;
+    padding: 1%;
+    box-sizing: border-box;
+}
+#czystka{
+    color: blueviolet;
+    margin: 100px;
+}
