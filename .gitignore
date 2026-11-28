@@ -1,7 +1,6 @@
 *.obj
 *.ilk
 *.pdb
-GeminiPro/
 .VSCodeCounter/**/*
 !.VSCodeCounter/**/
 !.VSCodeCounter/**/*.md
